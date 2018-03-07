@@ -90,24 +90,33 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 My final model consists of 5 convolution layers follwed by three fully connected layers with batch normalization for faster learning and higher accuracy.I am using MSE as loss function and Adam as gradient optimizer.
 
-![alt text][image1]
+
+
 
 #### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+
+
+
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to recover itself in case it deviates from its path.
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+
+
+Left Sided View
+
+
+
+Right Sided View
+
+
+
+
+Center View
 
 To augment the data sat, I also flipped images and angles thinking that this would provide better symmetric view. For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
 
 After the collection process, I had 30867 number of data points. I then preprocessed this data by merging all image paths in one list and putting angle measurements in another list.
 I finally randomly shuffled the data set and put 20% of the data into a validation set and 80% in training set. 
